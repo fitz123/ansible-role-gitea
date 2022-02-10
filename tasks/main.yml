@@ -87,7 +87,7 @@
     enabled: true
   when: ansible_service_mgr == "systemd"
 
-- include_taksk: dump.yaml
+- include_tasks: dump.yaml
   when: gitea_db_dump_create|bool
 
 - include: fail2ban.yml

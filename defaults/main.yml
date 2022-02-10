@@ -98,3 +98,6 @@ gitea_extra_config: ""
 
 gitea_backup_on_upgrade: false
 gitea_backup_location: "{{ gitea_home }}/backups/"
+
+gitea_db_dump_create: False
+gitea_db_dump_path: False

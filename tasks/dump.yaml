@@ -1,0 +1,9 @@
+---
+- name: Install sqlite3
+  apt:
+    name: sqlite3
+    state: present
+- name: Dump gitea.db
+  ansible.builtin.shell:
+    cmd: "sqlite3 {{ gitea_db_path }} .dump > {{ gitea_db_dump_path }}"
+  changed_when: False

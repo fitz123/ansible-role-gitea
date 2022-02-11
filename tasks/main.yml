@@ -63,7 +63,6 @@
     mode: 'u=rwX,g=rX,o='
     recurse: true
   with_items:
-    - "{{ gitea_home }}"
     - "{{ gitea_home }}/data"
     - "{{ gitea_home }}/custom"
     - "{{ gitea_home }}/custom/https"

@@ -44,7 +44,7 @@
   with_items:
     - "/etc/gitea"
 
-- name: "Create data directory"
+- name: "Create home directory"
   file:
     path: "{{ item }}"
     state: directory

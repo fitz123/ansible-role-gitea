@@ -51,6 +51,16 @@
     owner: "{{ gitea_user }}"
     group: "{{ gitea_group }}"
     mode: 'u=rwX,g=rX,o='
+  with_items:
+    - "{{ gitea_home }}"
+
+- name: "Create data directory"
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ gitea_user }}"
+    group: "{{ gitea_group }}"
+    mode: 'u=rwX,g=rX,o='
     recurse: true
   with_items:
     - "{{ gitea_home }}"
